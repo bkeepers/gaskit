@@ -19,6 +19,7 @@ GEM
     builder (2.1.2)
     columnize (0.3.4)
     diff-lcs (1.1.2)
+    factory_girl (2.0.4)
     grit (2.4.1)
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
@@ -78,6 +79,7 @@ PLATFORMS
 
 DEPENDENCIES
   adapter-git!
+  factory_girl
   rack-test
   rake
   rspec

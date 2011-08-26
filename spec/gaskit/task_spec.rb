@@ -23,7 +23,7 @@ describe Gaskit::Task do
   describe '.count' do
     it 'should return the correct count for tasks' do
       Gaskit::Task.count.should == 0
-      task = Gaskit::Task.create!(:description => 'First task')
+      task = create(:task)
       Gaskit::Task.count.should == 1
       task.destroy
       Gaskit::Task.count.should == 0
