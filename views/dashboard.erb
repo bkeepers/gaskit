@@ -1,0 +1,11 @@
+<form action="/tasks" id="new_task" method="POST">
+  <input type="text" name="description">
+  <input type="submit" value="Add">
+</form>
+
+<ul id="tasks">
+</ul>
+
+<script type="text/html" id="task-template">
+  <li id="task-{{id}}" class="task">{{description}}</li>
+</script>
