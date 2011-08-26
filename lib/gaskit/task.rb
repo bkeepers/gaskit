@@ -8,8 +8,21 @@ module Gaskit
     attribute :description, String
 
     def self.count
-      head = store.client.get_head('gaskit')
-      head ? head.commit.tree.contents.length : 0
+      contents.length
     end
+
+    def self.all
+      contents.map do |entry|
+        get(entry.name)
+      end
+    end
+
+  private
+
+    def self.contents
+      head = store.client.get_head('gaskit')
+      head ? head.commit.tree.contents : []
+    end
+
   end
 end

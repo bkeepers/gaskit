@@ -20,7 +20,8 @@ module Gaskit
     before do
       if request.media_type == 'application/json'
         request.body.rewind
-        params.merge!(ActiveSupport::JSON.decode(request.body))
+        body = request.body.read
+        params.merge!(ActiveSupport::JSON.decode(body)) unless body.blank?
       end
     end
 
@@ -28,10 +29,22 @@ module Gaskit
       erb :dashboard
     end
 
+    get '/tasks' do
+      json Task.all
+    end
+
     post '/tasks' do
       task = Task.new(params)
       task.save
-      task.to_json
+      json task
     end
+
+  private
+
+    def json(data)
+      content_type :js
+      data.to_json
+    end
+
   end
 end

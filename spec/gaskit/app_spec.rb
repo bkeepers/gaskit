@@ -15,7 +15,27 @@ describe Gaskit::App do
     end
   end
 
-  context 'POST /task' do
+  context 'GET /tasks' do
+    before do
+      @task = create(:task)
+    end
+
+    subject do
+      get '/tasks'
+    end
+
+    it 'should be successful' do
+      subject.status.should == 200
+    end
+
+    it 'should render json' do
+      json = ActiveSupport::JSON.decode(subject.body)
+      json.length.should == 1
+      json[0]['id'].should == @task.id
+    end
+  end
+
+  context 'POST /tasks' do
     subject do
       post '/tasks', 'description' => 'Boot the intersect'
     end

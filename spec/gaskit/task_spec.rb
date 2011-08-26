@@ -29,4 +29,14 @@ describe Gaskit::Task do
       Gaskit::Task.count.should == 0
     end
   end
+
+  describe '.all' do
+    it 'should all tasks' do
+      Gaskit::Task.all.should == []
+      task = create(:task)
+      Gaskit::Task.all.should == [task]
+      task.destroy
+      Gaskit::Task.all.should == []
+    end
+  end
 end
