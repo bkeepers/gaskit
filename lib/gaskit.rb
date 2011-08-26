@@ -8,8 +8,12 @@ module Gaskit
     @root ||= Pathname(File.expand_path('../..', __FILE__))
   end
 
+  def self.env
+    @env ||= ActiveSupport::StringInquirer.new(ENV['RACK_ENV'] || 'development')
+  end
+
   def self.repo
-    @repo ||= Grit::Repo.new(root.join('testrepo'))
+    @repo ||= env.test? ? Grit::Repo.init(root.join('testrepo').to_s) : Grit::Repo.new(root.to_s)
   end
 end
 

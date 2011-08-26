@@ -1,3 +1,5 @@
+ENV['RACK_ENV'] = 'test'
+
 require 'bundler'
 Bundler.require 'test'
 require 'gaskit'
