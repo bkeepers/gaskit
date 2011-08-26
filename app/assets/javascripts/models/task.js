@@ -1,1 +1,3 @@
-var Task = Spine.Model.setup("Model", ["description"]);
+var Task = Spine.Model.setup("Task", ["description"]);
+
+Task.extend(Spine.Model.Ajax);

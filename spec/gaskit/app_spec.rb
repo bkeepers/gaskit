@@ -17,7 +17,7 @@ describe Gaskit::App do
 
   context 'POST /task' do
     subject do
-      post '/tasks', 'task' => {'description' => 'Boot the intersect'}
+      post '/tasks', 'description' => 'Boot the intersect'
     end
 
     it 'should be successful' do
@@ -31,8 +31,8 @@ describe Gaskit::App do
 
     it 'should render json' do
       json = ActiveSupport::JSON.decode(subject.body)
-      json['task']['description'].should == 'Boot the intersect'
-      json['task']['id'].should be_present
+      json['description'].should == 'Boot the intersect'
+      json['id'].should be_present
     end
   end
 end

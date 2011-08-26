@@ -17,14 +17,21 @@ module Gaskit
       end
     end
 
+    before do
+      if request.media_type == 'application/json'
+        request.body.rewind
+        params.merge!(ActiveSupport::JSON.decode(request.body))
+      end
+    end
+
     get '/' do
       erb :dashboard
     end
 
     post '/tasks' do
-      task = Task.new(params['task'])
+      task = Task.new(params)
       task.save
-      {'task' => task}.to_json
+      task.to_json
     end
   end
 end

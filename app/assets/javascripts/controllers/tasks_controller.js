@@ -1,10 +1,9 @@
 var TasksController = Spine.Controller.create({
   elements: {'#new_task': 'form', '#tasks': 'tasks'},
   events:   {'submit #new_task': 'create'},
-  proxied:  ['add'],
 
   init: function() {
-    Task.bind('create', this.add);
+    Task.bind('create', this.proxy(this.add));
   },
 
   create: function(e) {
@@ -15,6 +14,6 @@ var TasksController = Spine.Controller.create({
 
   add: function(task) {
     var controller = TaskController.init({task: task});
-    this.el.append(controller.render().el);
+    this.tasks.append(controller.render().el);
   }
 });

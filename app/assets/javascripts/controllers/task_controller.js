@@ -1,9 +1,7 @@
 var TaskController = Spine.Controller.create({
-  proxied: ["render", "remove"],
-
   init: function(){
-    this.task.bind("update",  this.render);
-    this.task.bind("destroy", this.remove);
+    this.task.bind("update",  this.proxy(this.render));
+    this.task.bind("destroy", this.proxy(this.remove));
   },
 
   render: function(){
