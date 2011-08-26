@@ -4,6 +4,8 @@ gem 'sinatra'
 gem 'rake'
 gem 'toystore'
 gem 'adapter-git', :git => 'git://github.com/bkeepers/adapter-git.git'
+gem 'sprockets', '~> 2.0.0.beta.15'
+gem 'sass'
 
 group :test do
   gem 'rspec'
