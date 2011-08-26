@@ -1,7 +1,9 @@
 module Gaskit
   class App < Sinatra::Base
+    set :root, Gaskit.root
+
     get '/' do
-      "Hello World"
+      erb :dashboard
     end
 
     post '/tasks' do

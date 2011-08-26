@@ -2,11 +2,15 @@ require 'bundler'
 Bundler.require
 
 module Gaskit
-  def self.repo
-    @repo ||= Grit::Repo.new(File.expand_path('../../testrepo', __FILE__))
+  autoload :App, 'gaskit/app'
+
+  def self.root
+    @root ||= Pathname(File.expand_path('../..', __FILE__))
   end
 
-  autoload :App, 'gaskit/app'
+  def self.repo
+    @repo ||= Grit::Repo.new(root.join('testrepo'))
+  end
 end
 
 require 'gaskit/task'
