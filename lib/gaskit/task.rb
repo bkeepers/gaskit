@@ -6,6 +6,7 @@ module Gaskit
     store :git, Gaskit.repo, :branch => 'gaskit'
 
     attribute :description, String
+    attribute :status,      String, :default => 'pending'
 
     def self.count
       contents.length
