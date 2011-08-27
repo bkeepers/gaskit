@@ -6,17 +6,8 @@
 <ul id="tasks">
 </ul>
 
-<script type="text/html" id="task-template">
-  <li id="task-{{id}}" class="task editable">
-    <div class="view-mode">
-      {{description}}
-      <a href="#" class="state-changer">Edit</a>
-    </div>
-    <div class="edit-mode">
-      <form action="/tasks/{{id}}" method="PUT">
-        <input type="text" name="description" value="{{description}}">
-        <input type="submit" value="Update"> or <a href="#" class="state-changer">Cancel</a>
-      </form>
-    </div>
-  </li>
+<% Dir["#{settings.views}/templates/*.handlebars"].each do |file| %>
+<script type="text/html" id="<%= File.basename(file, '.handlebars') %>-template">
+<%= File.read(file) %>
 </script>
+<% end %>
