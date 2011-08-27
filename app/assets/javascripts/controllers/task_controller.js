@@ -1,6 +1,6 @@
 var TaskController = Spine.Controller.create({
   elements: {'form': 'form'},
-  events:   {'submit form': 'update'},
+  events:   {'submit form': 'update', 'click .destroy': 'destroy'},
 
   init: function(){
     this.task.bind("update",  this.proxy(this.render));
@@ -27,6 +27,11 @@ var TaskController = Spine.Controller.create({
   update: function(e) {
     e.preventDefault();
     this.task.updateAttributes(this.form.serializeForm());
+  },
+
+  destroy: function(e) {
+    e.preventDefault();
+    this.task.destroy();
   }
 
 });

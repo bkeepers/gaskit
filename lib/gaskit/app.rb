@@ -46,6 +46,12 @@ module Gaskit
       json task
     end
 
+    delete '/tasks/:id' do
+      task = Task.get!(params['id'])
+      task.destroy
+      :ok
+    end
+
   private
 
     def json(data)

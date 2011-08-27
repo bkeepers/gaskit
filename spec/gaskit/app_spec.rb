@@ -80,5 +80,22 @@ describe Gaskit::App do
     end
   end
 
+  context 'PUT /tasks/:id' do
+    before do
+      @task = create(:task)
+    end
 
+    subject do
+      delete "/tasks/#{@task.id}"
+    end
+
+    it 'should be successful' do
+      subject.status.should == 200
+    end
+
+    it 'should destroy the task' do
+      subject
+      Gaskit::Task.key?(@task.id).should be_false
+    end
+  end
 end
