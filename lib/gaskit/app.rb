@@ -39,6 +39,13 @@ module Gaskit
       json task
     end
 
+    put '/tasks/:id' do
+      task = Task.get!(params['id'])
+      task.attributes = params
+      task.save!
+      json task
+    end
+
   private
 
     def json(data)

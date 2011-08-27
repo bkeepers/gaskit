@@ -55,4 +55,30 @@ describe Gaskit::App do
       json['id'].should be_present
     end
   end
+
+  context 'PUT /tasks/:id' do
+    before do
+      @task = create(:task)
+    end
+
+    subject do
+      put "/tasks/#{@task.id}", 'description' => 'updated'
+    end
+
+    it 'should be successful' do
+      subject.status.should == 200
+    end
+
+    it 'should update the task' do
+      subject
+      @task.reload.description.should == 'updated'
+    end
+
+    it 'should render json' do
+      json = ActiveSupport::JSON.decode(subject.body)
+      json['id'].should == @task.id
+    end
+  end
+
+
 end

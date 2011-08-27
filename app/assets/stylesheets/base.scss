@@ -1,1 +1,6 @@
-/* base.css */
+.edit-mode { display: none; }
+
+.edit {
+  .view-mode { display: none; }
+  .edit-mode { display: block; }
+}
