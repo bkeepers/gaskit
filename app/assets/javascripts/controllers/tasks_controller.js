@@ -12,6 +12,7 @@ var TasksController = Spine.Controller.create({
     e.preventDefault();
     var data = this.form.serializeForm();
     Task.create(data);
+    this.form.clearForm();
   },
 
   add: function(task) {
