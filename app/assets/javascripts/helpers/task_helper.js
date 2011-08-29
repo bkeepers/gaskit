@@ -5,7 +5,6 @@ Handlebars.registerHelper('statuses', function(fn) {
 
   for(var i in statuses) {
     status = statuses[i];
-    console.log('evaluating', status, this.status)
     result += fn({name: status, value: status.toLowerCase(), selected: this.status == status.toLowerCase()});
   }
 
