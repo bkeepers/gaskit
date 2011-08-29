@@ -11,6 +11,9 @@ group :test do
   gem 'rspec'
   gem 'rack-test', :require => 'rack/test'
   gem 'factory_girl'
+  gem 'cucumber'
+  gem 'capybara'
+  gem 'capybara-webkit'
 end
 
 group :development, :test do
