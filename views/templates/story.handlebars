@@ -1,10 +1,10 @@
-<li id="task-{{id}}" class="task editable">
+<li id="story-{{id}}" class="story editable">
   <div class="view-mode">
     {{description}} <span class="status">({{status}})</span>
     <a href="#" class="state-changer">Edit</a>
   </div>
   <div class="edit-mode">
-    <form action="/tasks/{{id}}" method="PUT">
+    <form action="/stories/{{id}}" method="PUT">
       <input type="text" name="description" value="{{description}}">
       <select name="status">
         {{#statuses}}

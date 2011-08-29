@@ -7,7 +7,7 @@
 
 var ApplicationController = Spine.Controller.create({
   init: function() {
-    this.tasks = TasksController.init({el: $('#main')});
+    this.story = StoriesController.init({el: $('#main')});
   }
 });
 

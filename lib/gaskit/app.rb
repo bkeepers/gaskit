@@ -29,26 +29,26 @@ module Gaskit
       erb :dashboard
     end
 
-    get '/tasks' do
-      json Task.all
+    get '/stories' do
+      json Story.all
     end
 
-    post '/tasks' do
-      task = Task.new(params)
-      task.save
-      json task
+    post '/stories' do
+      story = Story.new(params)
+      story.save
+      json story
     end
 
-    put '/tasks/:id' do
-      task = Task.get!(params['id'])
-      task.attributes = params
-      task.save!
-      json task
+    put '/stories/:id' do
+      story = Story.get!(params['id'])
+      story.attributes = params
+      story.save!
+      json story
     end
 
-    delete '/tasks/:id' do
-      task = Task.get!(params['id'])
-      task.destroy
+    delete '/stories/:id' do
+      story = Story.get!(params['id'])
+      story.destroy
       :ok
     end
 

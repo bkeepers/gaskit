@@ -1,5 +1,5 @@
 module Gaskit
-  class Task
+  class Story
     include Toy::Store
     self.include_root_in_json = false
 

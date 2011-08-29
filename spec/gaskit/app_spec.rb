@@ -15,13 +15,13 @@ describe Gaskit::App do
     end
   end
 
-  context 'GET /tasks' do
+  context 'GET /stories' do
     before do
-      @task = create(:task)
+      @story = create(:story)
     end
 
     subject do
-      get '/tasks'
+      get '/stories'
     end
 
     it 'should be successful' do
@@ -31,22 +31,22 @@ describe Gaskit::App do
     it 'should render json' do
       json = ActiveSupport::JSON.decode(subject.body)
       json.length.should == 1
-      json[0]['id'].should == @task.id
+      json[0]['id'].should == @story.id
     end
   end
 
-  context 'POST /tasks' do
+  context 'POST /stories' do
     subject do
-      post '/tasks', 'description' => 'Boot the intersect'
+      post '/stories', 'description' => 'Boot the intersect'
     end
 
     it 'should be successful' do
       subject.status.should == 200
     end
 
-    it 'should create a task' do
+    it 'should create a story' do
       subject
-      Gaskit::Task.count.should == 1
+      Gaskit::Story.count.should == 1
     end
 
     it 'should render json' do
@@ -56,46 +56,46 @@ describe Gaskit::App do
     end
   end
 
-  context 'PUT /tasks/:id' do
+  context 'PUT /stories/:id' do
     before do
-      @task = create(:task)
+      @story = create(:story)
     end
 
     subject do
-      put "/tasks/#{@task.id}", 'description' => 'updated'
+      put "/stories/#{@story.id}", 'description' => 'updated'
     end
 
     it 'should be successful' do
       subject.status.should == 200
     end
 
-    it 'should update the task' do
+    it 'should update the story' do
       subject
-      @task.reload.description.should == 'updated'
+      @story.reload.description.should == 'updated'
     end
 
     it 'should render json' do
       json = ActiveSupport::JSON.decode(subject.body)
-      json['id'].should == @task.id
+      json['id'].should == @story.id
     end
   end
 
-  context 'PUT /tasks/:id' do
+  context 'PUT /stories/:id' do
     before do
-      @task = create(:task)
+      @story = create(:story)
     end
 
     subject do
-      delete "/tasks/#{@task.id}"
+      delete "/stories/#{@story.id}"
     end
 
     it 'should be successful' do
       subject.status.should == 200
     end
 
-    it 'should destroy the task' do
+    it 'should destroy the story' do
       subject
-      Gaskit::Task.key?(@task.id).should be_false
+      Gaskit::Story.key?(@story.id).should be_false
     end
   end
 end

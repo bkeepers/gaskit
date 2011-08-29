@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :task, :class => Gaskit::Task do
-    sequence(:description) {|i| "Task #{i}" }
+  factory :story, :class => Gaskit::Story do
+    sequence(:description) {|i| "Story #{i}" }
   end
 end

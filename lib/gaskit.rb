@@ -17,4 +17,4 @@ module Gaskit
   end
 end
 
-require 'gaskit/task'
+require 'gaskit/story'
