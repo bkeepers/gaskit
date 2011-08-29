@@ -1,18 +1,5 @@
-<li id="story-{{id}}" class="story editable">
-  <div class="view-mode">
-    {{description}} <span class="status">({{status}})</span>
-    <a href="#" class="state-changer">Edit</a>
-  </div>
-  <div class="edit-mode">
-    <form action="/stories/{{id}}" method="PUT">
-      <input type="text" name="description" value="{{description}}">
-      <select name="status">
-        {{#statuses}}
-          <option value="{{value}}"{{#if selected}} selected="selected"{{/if}}>{{name}}</option>
-        {{/statuses}}
-      </select>
-      <input type="submit" value="Update"> or <a href="#" class="state-changer">Cancel</a>
-      <a href="#" class="destroy">Delete</a>
-    </form>
-  </div>
+<li id="story-{{id}}" class="story">
+  <span class="icon"></span>
+  <a href="#">{{description}}</a>
+  <span class="status">({{status}})</span>
 </li>

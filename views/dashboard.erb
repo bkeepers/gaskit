@@ -1,13 +1,47 @@
-<form action="/stories" id="new_story" method="POST">
-  <input type="text" name="description">
-  <input type="submit" value="Add">
-</form>
-
-<ul id="stories">
-</ul>
+<nav>
+  <h2>Browse</h2>
+  <ul>
+    <li class="active"><a href="#"><span class="icon blue"></span>All Stories<span class="label indent">342</span></a></li>
+    <li><a href="#"><span class="icon green"></span>My Stories<span class="label indent">5</span></a></li>
+  </ul>
+  <h2>By Label</h2>
+  <ul>
+    <li><a href="#"><span class="icon red"></span>Git</a></li>
+    <li><a href="#"><span class="icon blue"></span>Integration</a></li>
+    <li><a href="#"><span class="icon green"></span>Testing</a></li>
+    <li><a href="#"><span class="icon purple"></span>UI</a></li>
+  </ul>
+  <h2>By Type</h2>
+  <ul class="last">
+    <li><a href="#"><span class="icon blue"></span>Features</a></li>
+    <li><a href="#"><span class="icon yellow"></span>Bugs</a></li>
+    <li><a href="#"><span class="icon red"></span>Chores</a></li>
+  </ul>
+</nav>
+<section>
+  <header>
+    <ul>
+      <li><a href="#" class="label indent">Add Story</a></li>
+    </ul>
+  </header>
+  <ul id="stories">
+  </ul>
+</section>
+<article id="preview">
+  <header>
+    <ul>
+      <li><a href="#">FTW</a></li>
+    </ul>
+  </header>
+  <form action="/stories" id="new_story" method="POST">
+    <input type="text" name="description">
+    <input type="submit" value="Add">
+  </form>
+</article>
 
 <% Dir["#{settings.views}/templates/*.handlebars"].each do |file| %>
 <script type="text/html" id="<%= File.basename(file, '.handlebars') %>-template">
 <%= File.read(file) %>
 </script>
 <% end %>
+

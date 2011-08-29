@@ -10,6 +10,10 @@ module HtmlSelectorsHelpers
 
     when "the page"
       "html > body"
+    when "the story editor"
+      "article"
+    when "the story list"
+      "#stories"
     when /^the story "(.+)"$/
       story = Gaskit::Story.all.detect {|s| s.description == $1 } || raise("Could not find story: #{$1}")
       "#story-#{story.id}"

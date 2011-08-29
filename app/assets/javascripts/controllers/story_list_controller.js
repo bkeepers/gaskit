@@ -1,4 +1,4 @@
-var StoriesController = Spine.Controller.create({
+var StoryListController = Spine.Controller.create({
   elements: {'#new_story': 'form', '#stories': 'stories'},
   events:   {'submit #new_story': 'create'},
 
@@ -21,7 +21,7 @@ var StoriesController = Spine.Controller.create({
   },
 
   add: function(story) {
-    var controller = StoryController.init({story: story});
+    var controller = StoryListItemController.init({story: story});
     this.stories.append(controller.render().el);
   },
 

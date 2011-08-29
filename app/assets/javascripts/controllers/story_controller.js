@@ -1,27 +1,22 @@
 var StoryController = Spine.Controller.create({
   elements: {'form': 'form'},
-  events:   {'submit form': 'update', 'click .destroy': 'destroy'},
+  events:   {
+    'submit form':    'update',
+    'click .destroy': 'destroy'
+  },
 
-  init: function(){
-    this.story.bind("update",  this.proxy(this.render));
+  init: function() {
     this.story.bind("destroy", this.proxy(this.remove));
   },
 
   render: function() {
-    this.replace($(this.template(this.story))).data('model', this.story);
+    this.html(this.template());
     return this;
   },
 
-  template: function(story) {
-    var template = StoriesController.template;
-    if(!template) {
-      template = StoriesController.template = Handlebars.compile($('#story-template').html());
-    }
-    return template(story);
-  },
-
-  remove: function(){
-    this.el.remove();
+  template: function() {
+    template = Handlebars.compile($('#edit-story-template').html());
+    return template(this.story);
   },
 
   update: function(e) {
@@ -32,6 +27,9 @@ var StoryController = Spine.Controller.create({
   destroy: function(e) {
     e.preventDefault();
     this.story.destroy();
-  }
+  },
 
+  remove: function() {
+    this.el.html('');
+  }
 });
