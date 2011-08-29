@@ -1,0 +1,4 @@
+--- 
+position: 0.5
+description: Fix adapter-git#clear for an empty repo
+status: pending
