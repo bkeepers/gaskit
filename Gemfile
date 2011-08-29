@@ -14,6 +14,7 @@ group :test do
   gem 'cucumber'
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'launchy'
 end
 
 group :development, :test do

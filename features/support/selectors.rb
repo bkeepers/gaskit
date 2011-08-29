@@ -10,6 +10,9 @@ module HtmlSelectorsHelpers
 
     when "the page"
       "html > body"
+    when /^the story "(.+)"$/
+      story = Gaskit::Story.all.detect {|s| s.description == $1 } || raise("Could not find story: #{$1}")
+      "#story-#{story.id}"
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
