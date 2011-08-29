@@ -8,7 +8,7 @@ var TaskController = Spine.Controller.create({
   },
 
   render: function() {
-    this.replace($(this.template(this.task)))
+    this.replace($(this.template(this.task))).data('model', this.task);
     return this;
   },
 

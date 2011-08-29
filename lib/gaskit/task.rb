@@ -7,6 +7,7 @@ module Gaskit
 
     attribute :description, String
     attribute :status,      String, :default => 'pending'
+    attribute :position,    Float
 
     def self.count
       contents.length
@@ -15,7 +16,7 @@ module Gaskit
     def self.all
       contents.map do |entry|
         get(entry.name)
-      end
+      end.sort_by {|m| m.position || 1 }
     end
 
   private
