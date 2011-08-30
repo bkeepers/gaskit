@@ -21,7 +21,7 @@
 <section>
   <header>
     <ul>
-      <li><a href="#" class="label indent">Add Story</a></li>
+      <li><a href="#/stories/new" class="label indent" id="new-story">New Story</a></li>
     </ul>
   </header>
   <ul id="stories">
@@ -33,10 +33,6 @@
       <li><a href="#">FTW</a></li>
     </ul>
   </header>
-  <form action="/stories" id="new_story" method="POST">
-    <input type="text" name="description">
-    <input type="submit" value="Add">
-  </form>
 </article>
 
 <% Dir["#{settings.views}/templates/*.handlebars"].each do |file| %>

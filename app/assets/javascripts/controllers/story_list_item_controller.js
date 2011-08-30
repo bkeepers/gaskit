@@ -1,9 +1,5 @@
 var StoryListItemController = Spine.Controller.create({
-  events:   {
-    'click': 'show'
-  },
-
-  init: function(){
+  init: function() {
     this.story.bind("update",  this.proxy(this.render));
     this.story.bind("destroy", this.proxy(this.remove));
   },
@@ -23,10 +19,5 @@ var StoryListItemController = Spine.Controller.create({
 
   remove: function(){
     this.el.remove();
-  },
-
-  show: function(e) {
-    e.preventDefault();
-    StoryController.init({el: $('article'), story: this.story}).render();
   }
 });

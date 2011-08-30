@@ -1,6 +1,5 @@
 var StoryListController = Spine.Controller.create({
-  elements: {'#new_story': 'form', '#stories': 'stories'},
-  events:   {'submit #new_story': 'create'},
+  elements: {'#stories': 'stories'},
 
   init: function() {
     Story.fetch();
@@ -11,13 +10,10 @@ var StoryListController = Spine.Controller.create({
       axis: 'y',
       update: this.proxy(this.sort)
     });
-  },
 
-  create: function(e) {
-    e.preventDefault();
-    var data = this.form.serializeForm();
-    Story.create(data);
-    this.form.clearForm();
+    this.routes({
+      '/stories/:id': this.show
+    });
   },
 
   add: function(story) {
@@ -38,5 +34,10 @@ var StoryListController = Spine.Controller.create({
 
     story.positionBetween(prevPosition, nextPosition);
     story.save();
+  },
+
+  show: function(params) {
+    StoryController.init({el: $('article'), story: Story.find(params.id)}).render();
   }
+
 });
