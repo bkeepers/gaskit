@@ -48,7 +48,7 @@ body {
 
 /* filters and nav */
 #nav {
-  background-color:rgb(18,23,29);
+  background:rgb(23,31,38) url(sidebar.png);
   color:#fff;
   float:left;
   height:100%;
@@ -88,7 +88,7 @@ body {
       }
     }
     li.active {
-      background: -webkit-linear-gradient(top, rgb(60,151,242) 0%, rgb(9,112,222) 100%);
+      background: -webkit-linear-gradient(top, rgb(74, 171, 239) 0%, rgb(1,136,222) 80%);
     }
 
     li a {
