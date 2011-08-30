@@ -5,7 +5,7 @@ Bundler.require 'test'
 require 'gaskit'
 require 'factories'
 
-Rspec.configure do |config|
+RSpec.configure do |config|
   config.include Factory::Syntax::Methods
 
   config.before do
