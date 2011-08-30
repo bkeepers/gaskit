@@ -90,6 +90,17 @@ body {
     li.active {
       background: -webkit-linear-gradient(top, rgb(60,151,242) 0%, rgb(9,112,222) 100%);
     }
+
+    li a {
+      background-position: 10px 7px;
+      background-repeat: no-repeat;
+    }
+
+    li#all-stories a { background-image: url(icon-all.png); }
+    li#my-stories a  { background-image: url(icon-my.png); }
+    li#features a    { background-image: url(icon-features.png); }
+    li#bugs a        { background-image: url(icon-bugs.png); }
+    li#chores a      { background-image: url(icon-chores.png); }
   }
 }
 
