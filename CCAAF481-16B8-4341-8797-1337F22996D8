@@ -1,3 +1,4 @@
 --- 
+position: 
 description: Setup integration tests with capybara-webkit
-status: pending
+status: completed
