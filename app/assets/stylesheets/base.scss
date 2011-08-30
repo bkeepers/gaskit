@@ -105,6 +105,7 @@ section {
     &.story {
       border-bottom:1px solid rgb(224,224,224);
       span.icon {
+        display:none;
         background:url(bars.png);
       }
       p {
