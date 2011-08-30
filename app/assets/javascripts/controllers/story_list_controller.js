@@ -5,6 +5,7 @@ var StoryListController = Spine.Controller.create({
     Story.fetch();
     Story.bind('create', this.proxy(this.add));
     Story.bind('refresh', this.proxy(this.addAll));
+    Story.bind('create destroy refresh', this.updateCounts)
 
     this.stories.sortable({
       axis: 'y',
@@ -38,6 +39,10 @@ var StoryListController = Spine.Controller.create({
 
   show: function(params) {
     StoryController.init({el: $('article'), story: Story.find(params.id)}).render();
+  },
+
+  updateCounts: function() {
+    $('#all-stories .label, #features .label').text(Story.count());
   }
 
 });
