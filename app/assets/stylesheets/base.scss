@@ -25,6 +25,7 @@ $my_ratio_down: 0.8;
     .label {
       background: -webkit-linear-gradient(top, rgb(60,151,242) 0%, rgb(9,112,222) 100%);
       padding:4px 8px;
+      text-shadow:rgba(0,0,0,0.5) 0px 1px 1px;
       text-transform:uppercase;
     }
   }
@@ -45,8 +46,8 @@ body {
   top:0;
 }
 
-/* nav */
-nav {
+/* filters and nav */
+#nav {
   background-color:rgb(18,23,29);
   color:#fff;
   float:left;
@@ -92,8 +93,8 @@ nav {
   }
 }
 
-/* stories */
-section {
+/* story browser */
+#list {
   float:left;
   width:30%;
   header {
@@ -123,8 +124,8 @@ section {
   }
 }
 
-/* preview */
-article {
+/* editor */
+#editor {
   float:left;
   width:55%;
   header {
