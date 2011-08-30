@@ -52,7 +52,7 @@ body {
   color:#fff;
   float:left;
   height:100%;
-  width:15%;
+  width:140px;
   h2 {
     border-top:1px solid rgb(26,31,37);
     color:rgb(120,120,120);
@@ -109,8 +109,12 @@ body {
 
 /* story browser */
 #list {
-  float:left;
-  width:30%;
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left:140px;
+  right:50%;
+  border-right:1px solid #ccc;
   header {
     @include header();
   }
@@ -140,8 +144,11 @@ body {
 
 /* editor */
 #editor {
-  float:left;
-  width:55%;
+  position: absolute;
+  left:50%;
+  right:0;
+  top:0;
+  bottom:0;
   header {
     @include header();
   }
