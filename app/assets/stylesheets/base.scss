@@ -6,7 +6,7 @@ $my_ratio_down: 0.8;
 
 /* mixins */
 @mixin header {
-  background: -webkit-linear-gradient(top, rgb(200,200,200) 0%, rgb(170,170,170) 100%);
+  background: -webkit-linear-gradient(top, rgb(229,229,229) 0%, rgb(186,186,186) 80%);
   border-bottom:1px solid rgb(79,79,79);
   position:relative;
   height:35px;
@@ -23,7 +23,7 @@ $my_ratio_down: 0.8;
     right:6px;
     top:6px;
     .label {
-      background: -webkit-linear-gradient(top, rgb(60,151,242) 0%, rgb(9,112,222) 100%);
+      background: -webkit-linear-gradient(top, rgb(80,175,237) 0%, rgb(2,128,201) 80%);
       padding:4px 8px;
       text-shadow:rgba(0,0,0,0.5) 0px 1px 1px;
       text-transform:uppercase;
