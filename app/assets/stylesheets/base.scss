@@ -84,7 +84,9 @@ body {
       span.label {
         position:absolute;
         right:6px;
-        top:10px;
+        width:2em;
+        top:7px;
+        text-align:center;
       }
     }
     li.active {
@@ -180,7 +182,7 @@ body {
     color:rgb(230,230,230);
     font-size:$base_size*$my_ratio_down;
     line-height:$base_size*$my_ratio_down*1.4;
-    padding:0 5px;
+    padding:2px 5px;
     text-decoration:none;
     text-shadow:none;
   }
