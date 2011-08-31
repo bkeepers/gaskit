@@ -1,7 +1,7 @@
 .inset {
   border:none;
   @include border-radius(3px);
-  color:rgb(230,230,230);
+  color:#fff;
   text-decoration:none;
 }
 
@@ -21,7 +21,7 @@
   display: inline-block;
   line-height:24px;
   padding:0 10px;
-  text-shadow:rgba(0,0,0,0.3) 0px 1px 1px;
+  text-shadow:rgba(0,0,0,0.5) 0px 1px 1px;
   text-transform:uppercase;
   background: -webkit-linear-gradient(top, rgb(80,175,237) 0%, rgb(2,128,201) 80%);
   margin:0;

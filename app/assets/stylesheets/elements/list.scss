@@ -8,7 +8,7 @@
   border-right:1px solid #ccc;
   #stories {
     position:absolute;
-    top:37px;
+    top:36px;
     left:0;
     right:0;
     bottom:0;
@@ -50,6 +50,13 @@
       &.active, &.active a:hover {
         background: -webkit-linear-gradient(top, rgb(74, 171, 239) 0%, rgb(1,136,222) 80%);
         color:#fff;
+        text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+      }
+
+      &.active {
+        border-bottom:1px solid rgb(5,110,178);
+        border-top: 1px solid rgb(5,110,178);
+        margin-top: -1px;
       }
     }
     &.milestone {
