@@ -1,4 +1,4 @@
 --- 
 position: 0.25
 description: User can set a status of a task
-status: completed
+status: approved
