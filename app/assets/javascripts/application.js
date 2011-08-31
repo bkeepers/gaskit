@@ -9,7 +9,12 @@ var ApplicationController = Spine.Controller.create({
   init: function() {
     StoryListController.init({el: $('#container')});
     NewStoryController.init({el: $('article')});
-    Spine.Route.setup();
+
+    var setup = function() {
+      Spine.Route.setup();
+      Story.unbind('refresh', setup);
+    }
+    Story.bind('refresh', setup);
   }
 });
 
