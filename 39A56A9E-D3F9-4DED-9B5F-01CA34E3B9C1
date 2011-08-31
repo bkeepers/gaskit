@@ -1,0 +1,8 @@
+--- 
+position: 0.9990234375
+description: "Add keyboard shortcuts\r\n\
+  \r\n\
+  up/down - select previous/next story\r\n\
+  n - add a new story\r\n\
+  \xE2\x8C\x98s - save current story\r\n"
+status: pending
