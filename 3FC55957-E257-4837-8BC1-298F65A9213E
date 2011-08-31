@@ -1,4 +1,4 @@
 --- 
-position: 0.453125
+position: 0.421875
 description: "[BUG] User can reload and selected story gets properly loaded"
 status: approved
