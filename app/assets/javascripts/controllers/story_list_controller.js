@@ -40,7 +40,7 @@ var StoryListController = Spine.Controller.create({
   show: function(params) {
     this.stories.find('.active').removeClass('active');
     this.stories.find('#story-' + params.id).addClass('active');
-    StoryController.init({el: $('article'), story: Story.find(params.id)}).render();
+    $('#editor').html(StoryController.init({story: Story.find(params.id)}).render().el);
   },
 
   updateCounts: function() {

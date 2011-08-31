@@ -6,6 +6,7 @@ var StoryController = Spine.Controller.create({
   },
 
   init: function() {
+    this.story.bind("update", this.proxy(this.render));
     this.story.bind("destroy", this.proxy(this.remove));
   },
 
