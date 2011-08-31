@@ -1,4 +1,4 @@
 --- 
 position: 0.40625
 description: Fix adapter-git#clear for an empty repo
-status: pending
+status: completed
