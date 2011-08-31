@@ -119,21 +119,40 @@ body {
     @include header();
   }
   li {
-    height:40px;
     position:relative;
     &.story {
-      border-bottom:1px solid rgb(224,224,224);
-      span.icon {
-        display:none;
-        background:url(bars.png);
-      }
+      color:rgb(52,52,52);
+      border-bottom:1px solid rgb(229,229,229);
       p {
-        color:rgb(52,52,52);
         font-weight:100;
         left:40px;
         position:absolute;
         top:10px;
         width:70%;
+      }
+      a {
+        padding:0.8em 0 0.7em 40px;
+        display:block;
+        color:inherit;
+        text-decoration:none;
+
+        &:hover {
+          background-color:rgb(250,250,250);
+        }
+      }
+
+      &.approved {
+        background-color: rgb(238,238,238);
+        color: rgb(150,150,150);
+
+        a:hover {
+          background-color: rgb(235, 235, 235);
+        }
+      }
+
+      &.active, &.active a:hover {
+        background: -webkit-linear-gradient(top, rgb(74, 171, 239) 0%, rgb(1,136,222) 80%);
+        color:#fff;
       }
     }
     &.milestone {
