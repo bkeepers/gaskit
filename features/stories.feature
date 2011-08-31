@@ -21,7 +21,7 @@ Feature: Stories
 
     When I fill in "description" with "User can update a story" within the story editor
     And I select "Started" from "status" within the story editor
-    And I press "Update" within the story editor
+    And I press "Save" within the story editor
 
     Then I should see "User can update a story" within the story list
     And I should not see "Updating a story" within the story list
