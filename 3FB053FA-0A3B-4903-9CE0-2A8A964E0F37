@@ -1,4 +1,7 @@
 --- 
 position: 0.96875
-description: User can view "My Stories"
+description: |-
+  User can view "My Stories"
+  
+  All unapproved stories that are unassigned or assigned to current user
 status: pending
