@@ -1,4 +1,4 @@
 --- 
-position: 0.421875
+position: 0.8125
 description: Setup integration tests with capybara-webkit
-status: approved
+status: completed
