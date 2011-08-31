@@ -1,5 +1,5 @@
 var StoryListController = Spine.Controller.create({
-  elements: {'#stories': 'stories'},
+  elements: {'#stories': 'stories', '#editor': 'editor'},
 
   init: function() {
     Story.fetch();
@@ -40,7 +40,7 @@ var StoryListController = Spine.Controller.create({
   show: function(params) {
     this.stories.find('.active').removeClass('active');
     this.stories.find('#story-' + params.id).addClass('active');
-    $('#editor').html(StoryController.init({story: Story.find(params.id)}).render().el);
+    this.editor.html(StoryController.init({story: Story.find(params.id)}).render().el);
   },
 
   updateCounts: function() {

@@ -11,8 +11,9 @@ var NewStoryController = Spine.Controller.create({
   create: function(e) {
     e.preventDefault();
     var data = this.form.serializeForm();
-    Story.create(data);
+    var story = Story.create(data);
     this.form.clearForm();
+    this.navigate('/stories/' + story.id, true);
   },
 
   render: function() {

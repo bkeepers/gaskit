@@ -5,7 +5,7 @@ Feature: Stories
     When I go to the home page
     And I follow "New Story"
     And I fill in "description" with "Set up integration tests with capybara-webkit"
-    And I press "Add"
+    And I press "Save"
     Then I should see "Set up integration tests"
 
     When I go to the home page
@@ -42,7 +42,8 @@ Feature: Stories
     When I go to the home page
     Then I should not see "A stupid story"
 
-  @selenium # not sure why this fails webkit
+  # not sure why this fails webkit
+  @selenium
   Scenario: Changing status of a story
     Given the following story exists:
       | description        |
