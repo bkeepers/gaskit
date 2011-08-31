@@ -1,0 +1,53 @@
+#list {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left:140px;
+  right:50%;
+  border-left:1px solid rgb(44,52,59);
+  border-right:1px solid #ccc;
+  header {
+    @include header();
+  }
+  li {
+    position:relative;
+    &.story {
+      color:rgb(52,52,52);
+      border-bottom:1px solid rgb(229,229,229);
+      p {
+        font-weight:100;
+        left:40px;
+        position:absolute;
+        top:10px;
+        width:70%;
+      }
+      a {
+        padding:0.8em 0 0.7em 40px;
+        display:block;
+        color:inherit;
+        text-decoration:none;
+
+        &:hover {
+          background-color:rgb(248,248,248);
+        }
+      }
+
+      &.approved {
+        background-color: rgb(238,238,238);
+        color: rgb(150,150,150);
+
+        a:hover {
+          background-color: rgb(235, 235, 235);
+        }
+      }
+
+      &.active, &.active a:hover {
+        background: -webkit-linear-gradient(top, rgb(74, 171, 239) 0%, rgb(1,136,222) 80%);
+        color:#fff;
+      }
+    }
+    &.milestone {
+
+    }
+  }
+}

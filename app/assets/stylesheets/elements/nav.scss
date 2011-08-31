@@ -1,0 +1,62 @@
+#nav {
+  background:rgb(23,31,38) url(sidebar.png);
+  color:#fff;
+  float:left;
+  height:100%;
+  width:140px;
+  h2 {
+    border-top:1px solid rgba(255,255,255,0.05);
+    color:rgb(120,120,120);
+    font-weight:bold;
+    font-size:$label_size;
+    height:24px;
+    line-height:$label_size*2.2;
+    padding: 6px 12px;
+    text-shadow:rgb(0,0,0) 1px 1px 1px;
+    text-transform:uppercase;
+  }
+  a, h2 {
+    position:relative;
+  }
+  ul {
+    border-bottom:1px solid rgba(0,0,0,0.2);
+    padding-bottom:$base_size;
+    &.last {
+      border-bottom:none;
+    }
+    a {
+      background-position:2px 2px;
+      color:#fff;
+      display:block;
+      padding: 6px 12px 6px 36px;
+      text-decoration:none;
+      text-shadow:rgb(0,0,0) 1px 1px 2px;
+      span.icon {
+        left:12px;
+        top:9px;
+      }
+      span.label {
+        height: 13px;
+        position:absolute;
+        right:6px;
+        text-align:center;
+        top:7px;
+        width:1.5em;
+      }
+    }
+    li.active {
+      background: -webkit-linear-gradient(top, rgb(74, 171, 239) 0%, rgb(1,136,222) 80%);
+    }
+
+    li a {
+      background-position: 10px 7px;
+      background-repeat: no-repeat;
+    }
+
+    li#all-stories a { background-image: url(icon-all.png); }
+    li#my-stories a  { background-image: url(icon-my.png); }
+    li#features a    { background-image: url(icon-features.png); }
+    li#bugs a        { background-image: url(icon-bugs.png); }
+    li#chores a      { background-image: url(icon-chores.png); }
+  }
+}

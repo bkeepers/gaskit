@@ -1,0 +1,25 @@
+.label {
+  font-size:$label_size;
+  line-height:$label_size*1.2;
+}
+.button {
+  font-size:$button_size;
+  line-height:$button_size*1.2;
+}
+.label, .button {
+  &.indent {
+    background-color:rgba(0,0,0,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    border-left:1px solid rgba(0,0,0,0.4);
+    border-right:1px solid rgba(255,255,255,0.2);
+    border-top:1px solid rgba(0,0,0,0.4);
+    @include border-radius(5px);
+    color:rgb(230,230,230);
+    padding:2px 5px;
+    text-decoration:none;
+    text-shadow:none;
+  }
+  &.blue {
+    background: -webkit-linear-gradient(top, rgb(80,175,237) 0%, rgb(2,128,201) 80%);
+  }
+}

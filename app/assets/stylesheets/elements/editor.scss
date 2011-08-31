@@ -1,0 +1,20 @@
+#editor {
+  bottom:0;
+  left:50%;
+  position: absolute;
+  right:0;
+  top:0;
+  header {
+    @include header();
+  }
+  form {
+    padding:$base_size*$golden_ratio_up;
+    textarea {
+      width:100%;
+      height:100px;
+    }
+    p {
+      margin-bottom:$base_size;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.icon {
+  border:1px solid rgb(26,31,37);
+  @include border-radius(4px);
+  height:14px;
+  position:absolute;
+  width:14px;
+  &.blue {
+    background-color:rgb(91,164,255);
+  }
+  &.red {
+    background-color:rgb(250,101,91);
+  }
+  &.green {
+    background-color:rgb(181,215,72);
+  }
+  &.purple {
+    background-color:rgb(193,143,217);
+  }
+  &.yellow {
+    background-color:rgb(239,218,71);
+  }
+}

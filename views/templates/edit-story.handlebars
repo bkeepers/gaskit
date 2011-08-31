@@ -1,12 +1,14 @@
 <header>
+
 </header>
 <form action="/stories/{{id}}" method="PUT">
-  <input type="text" name="description" value="{{description}}">
-  <select name="status">
-    {{#statuses}}
-      <option value="{{value}}"{{#if selected}} selected="selected"{{/if}}>{{name}}</option>
-    {{/statuses}}
-  </select>
-  <input type="submit" value="Update"> or <a href="#" class="state-changer">Cancel</a>
-  <a href="#" class="destroy">Delete</a>
+  <textarea name="description">{{description}}</textarea>
+  <p>
+    <select name="status">
+      {{#statuses}}
+        <option value="{{value}}"{{#if selected}} selected="selected"{{/if}}>{{name}}</option>
+      {{/statuses}}
+    </select>
+  </p>
+  <p><input type="submit" value="Update"> or <a href="#" class="destroy">Delete</a></p>
 </form>
