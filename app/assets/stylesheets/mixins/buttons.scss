@@ -1,0 +1,4 @@
+@mixin button($color) {
+  background: $color;
+  background: -webkit-linear-gradient(top, lighten($color, 5%) 0%, darken($color, 3%) 80%);
+}

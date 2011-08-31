@@ -1,6 +1,24 @@
 <li id="story-{{id}}" class="story {{status}}">
   <a href="#/stories/{{id}}">
     {{description}}
-    <span class="status">({{status}})</span>
+
+    <form>
+      {{#isPending}}
+        <button name="status" value="started" class="start">Start</button>
+      {{/isPending}}
+      {{#isStarted}}
+        <button name="status" value="completed" class="finish">Finish</button>
+      {{/isStarted}}
+      {{#isCompleted}}
+        <button name="status" value="delivered" class="deliver">Deliver</button>
+      {{/isCompleted}}
+      {{#isDelivered}}
+        <button name="status" value="rejected" class="reject">Reject</button>
+        <button name="status" value="approved" class="accept">Approve</button>
+      {{/isDelivered}}
+      {{#isRejected}}
+        <button name="status" value="started" class="restart">Restart</button>
+      {{/isRejected}}
+    </form>
   </a>
 </li>

@@ -1,4 +1,6 @@
 var StoryListItemController = Spine.Controller.create({
+  events:   {'click button': 'update'},
+
   init: function() {
     this.story.bind("update",  this.proxy(this.render));
     this.story.bind("destroy", this.proxy(this.remove));
@@ -19,5 +21,10 @@ var StoryListItemController = Spine.Controller.create({
 
   remove: function(){
     this.el.remove();
+  },
+
+  update: function(e) {
+    this.story.updateAttribute('status', $(e.target).val());
+    return false;
   }
 });

@@ -28,7 +28,7 @@
         width:70%;
       }
       a {
-        padding:0.8em 0 0.7em 40px;
+        padding:0.8em 100px 0.7em 40px;
         display:block;
         color:inherit;
         text-decoration:none;
@@ -55,12 +55,44 @@
 
       &.active {
         border-bottom:1px solid rgb(5,110,178);
-        border-top: 1px solid rgb(5,110,178);
+        border-top: 1px solid rgb(25,130,208);
         margin-top: -1px;
+      }
+
+      form {
+        position:absolute;
+        right:10px;
+        top:8px;
+      }
+
+      button {
+        font-size:0.9em;
+        line-height:20px;
+        padding:0 8px;
+      }
+
+      button.start, button.restart {
+        @include button(rgb(230,230,230));
+        color:#666;
+        text-shadow: 0px 1px 1px rgba(255,255,255,0.5);
+      }
+
+      button.deliver {
+        @include button(rgb(240, 145, 20));
+      }
+
+      button.accept {
+        @include button(rgb(100, 145, 20));
+      }
+
+      button.reject {
+        @include button(rgb(165, 35, 60));
       }
     }
     &.milestone {
 
     }
+
+
   }
 }

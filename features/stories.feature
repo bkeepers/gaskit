@@ -41,3 +41,21 @@ Feature: Stories
 
     When I go to the home page
     Then I should not see "A stupid story"
+
+  @selenium # not sure why this fails webkit
+  Scenario: Changing status of a story
+    Given the following story exists:
+      | description        |
+      | Get something done |
+    When I go to the home page
+    And I press "Start" within the story "Get something done"
+    And I press "Finish" within the story "Get something done"
+    And I press "Deliver" within the story "Get something done"
+    And I press "Reject" within the story "Get something done"
+    And I press "Restart" within the story "Get something done"
+    And I press "Finish" within the story "Get something done"
+    And I press "Deliver" within the story "Get something done"
+    And I press "Approve" within the story "Get something done"
+
+    And I follow "Get something done"
+    Then the "status" field should contain "approved"
