@@ -4,10 +4,7 @@
   position: absolute;
   right:0;
   top:0;
-  header {
-    @include header();
-  }
-  form {
+  .content {
     padding:$base_size*$golden_ratio_up;
     textarea {
       width:100%;

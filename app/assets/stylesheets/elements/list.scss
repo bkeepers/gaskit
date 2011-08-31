@@ -6,9 +6,15 @@
   right:50%;
   border-left:1px solid rgb(44,52,59);
   border-right:1px solid #ccc;
-  header {
-    @include header();
+  #stories {
+    position:absolute;
+    top:37px;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow:auto;
   }
+
   li {
     position:relative;
     &.story {

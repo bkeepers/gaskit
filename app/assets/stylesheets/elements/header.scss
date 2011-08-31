@@ -1,4 +1,4 @@
-@mixin header {
+header, footer {
   background: -webkit-linear-gradient(top, rgb(229,229,229) 0%, rgb(186,186,186) 80%);
   border-bottom:1px solid rgb(79,79,79);
   position:relative;
@@ -13,12 +13,16 @@
   }
   ul {
     position:absolute;
-    right:6px;
-    top:9px;
-    .button {
-      padding:4px 8px;
-      text-shadow:rgba(0,0,0,0.5) 0px 1px 1px;
-      text-transform:uppercase;
-    }
+    right:10px;
+    top:6px;
   }
+}
+
+footer {
+  border-bottom:none;
+  border-top:1px solid rgb(186,186,186);
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
 }
