@@ -13,7 +13,11 @@ module Gaskit
 
     helpers do
       def asset_path(source)
-        settings.sprockets.path(source, true, "assets")
+        if Gaskit.env.production?
+          settings.sprockets.path(source, true, "assets")
+        else
+          settings.sprockets.path("#{source}?#{Time.now.to_i}", false, "assets")
+        end
       end
     end
 
