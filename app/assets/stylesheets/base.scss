@@ -7,6 +7,7 @@ $golden_ratio_up: 1.618;
 
 /* basic setup */
 body {
+  color:rgb(52,52,52);
   font-family:helvetica, arial, freesans, clean, sans-serif;
   font-size:$base_size;
   line-height:$base_size*$golden_ratio_up;

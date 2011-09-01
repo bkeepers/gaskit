@@ -4,8 +4,14 @@
       <li><button type="submit">Save</button></li>
     </ul>
   </header>
-  <div class="content">
+
+  <h2>Description</h2>
+  <section>
     <textarea name="description">{{description}}</textarea>
+  </section>
+
+  <h2>Status</h2>
+  <section>
     <p>
       <select name="status">
         {{#statuses}}
@@ -13,7 +19,41 @@
         {{/statuses}}
       </select>
     </p>
-  </div>
+  </section>
+
+  <h2>Discuss</h2>
+  <section>
+    <ul class="discuss">
+      <li>
+        <p>Not a bad idea but I think the button should be bigger. Not a bad idea but I think the button should be bigger. Not a bad idea but I think the button should be bigger. Not a bad idea but I think the button should be bigger. Not a bad idea but I think the button should be bigger.</p>
+        <div class="meta">
+          <span>Jonathan Hoyt</span>
+          <span>6 hours ago</span>
+        </meta>
+      </li>
+      <li>
+        <p>Not a bad idea but I think the button should be bigger.</p>
+        <div class="meta">
+          <span>Jonathan Hoyt</span>
+          <span>6 hours ago</span>
+        </meta>
+      </li>
+    </ul>
+    <textarea></textarea>
+  </section>
+
+  <h2>Task List</h2>
+  <section>
+    <ul>
+      <li>Make everything green.</li>
+      <li>Understand the thinking.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p><input type="submit" value="Update"> or <a href="#" class="destroy">Delete</a></p>
+  </section>
+
   <footer>
     <ul><li><a href="#" class="destroy button">Delete</a></li></ul>
   </footer>
