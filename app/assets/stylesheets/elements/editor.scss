@@ -9,12 +9,12 @@
   }
   form {
     .scrollable {
-      bottom:35px;
+      bottom:36px;
       left:0;
       overflow-y:auto;
       position:absolute;
       right:0;
-      top:35px;
+      top:36px;
 
     }
     textarea {
@@ -22,14 +22,16 @@
       height:80px;
     }
     h2 {
-      color:rgb(120,120,120);
-      background:rgb(23,31,38) url(sidebar.png);
+      background: -webkit-linear-gradient(top, rgb(240,240,240) 0%, rgb(222,222,222) 80%);;
+      border-bottom:1px solid rgb(214,214,214);
+      color:rgb(53,53,53);
       font-weight:bold;
       font-size:$label_size;
       height:25px;
       line-height:$label_size*2.2;
-      padding: 6px 12px;
-      text-shadow:rgb(0,0,0) 1px 1px 1px;
+      margin-left:1px;
+      padding: 6px 12px 2px;
+      text-shadow:rgba(255,255,255,0.5) 0 1px 1px;
       text-transform:uppercase;
     }
     p {
