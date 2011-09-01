@@ -5,6 +5,10 @@ Story.extend(Spine.Model.Ajax).extend({
 });
 
 Story.include({
+  title: function() {
+    return this.description.split("\n")[0];
+  },
+
   positionBetween: function(prev, next) {
     prev = prev || 0;
     next = next || 1;
