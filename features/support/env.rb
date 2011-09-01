@@ -18,7 +18,7 @@ Capybara.save_and_open_page_path = Gaskit.root.join('tmp/capybara')
 Capybara.javascript_driver = ENV['SELENIUM'] ? :selenium : :webkit
 
 Before do
-  Gaskit::Story.store.clear
+  Gaskit.repo.git.fs_delete("refs/heads/gaskit")
 end
 
 Capybara.register_driver :selenium do |app|

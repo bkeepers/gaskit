@@ -56,6 +56,11 @@ module Gaskit
       :ok
     end
 
+    get '/users' do
+      User.ensure_i_exist
+      json User.all
+    end
+
   private
 
     def json(data)

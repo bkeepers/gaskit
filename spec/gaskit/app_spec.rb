@@ -98,4 +98,20 @@ describe App do
       Story.key?(@story.id).should be_false
     end
   end
+
+  context 'GET /users' do
+    subject do
+      get '/users'
+    end
+
+    it 'should be successful' do
+      subject.status.should == 200
+    end
+
+    it 'should render json' do
+      json = ActiveSupport::JSON.decode(subject.body)
+      json.length.should == 1
+      json[0]['name'].should == User.me.name
+    end
+  end
 end

@@ -2,6 +2,10 @@
   <a href="#/stories/{{id}}">
     {{title}}
 
+    {{#f owner }}
+      <span class="owner" title="{{name}}">{{initials}}</span>
+    {{/f}}
+
     <form>
       {{#isPending}}
         <button name="status" value="started" class="start">Start</button>

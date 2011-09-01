@@ -7,6 +7,8 @@
 
 var ApplicationController = Spine.Controller.create({
   init: function() {
+    User.fetch();
+
     StoryListController.init({el: $('#container')});
     NewStoryController.init({el: $('article')});
 

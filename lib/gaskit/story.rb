@@ -6,6 +6,7 @@ module Gaskit
     store :git, Gaskit.repo, :branch => 'gaskit', :path => 'stories'
 
     attribute :description, String
+    attribute :owner_email, String
     attribute :status,      String, :default => 'pending'
     attribute :position,    Float
 

@@ -11,7 +11,7 @@ module HtmlSelectorsHelpers
     when "the page"
       "html > body"
     when "the story editor"
-      "article"
+      "#editor"
     when "the story list"
       "#stories"
     when /^the story "(.+)"$/

@@ -22,6 +22,16 @@
       </p>
     </section>
 
+    <section>
+      <label for="story_owner">Owned by</label>
+      <select id="story_owner" name="owner_email">
+        <option>nobody</option>
+        {{#users}}
+          <option value="{{email}}" {{#selected}} selected="selected"{{/selected}}>{{name}}</option>
+        {{/users}}
+      </select>
+    </section>
+
     <h2>Discuss</h2>
     <section>
       <ul class="discuss">

@@ -37,12 +37,22 @@
         }
       }
 
+      .owner {
+        font-weight:bold;
+        color: #000;
+        padding-left:0.25em;
+        text-shadow:none;
+      }
+
       &.approved {
         background-color: rgb(238,238,238);
         color: rgb(150,150,150);
 
         a:hover {
           background-color: rgb(235, 235, 235);
+        }
+        .owner {
+          color:inherit;
         }
       }
 
@@ -56,6 +66,10 @@
         border-bottom:1px solid rgb(5,110,178);
         border-top: 1px solid rgb(25,130,208);
         margin-top: -1px;
+
+        .owner {
+          color: inherit;
+        }
       }
 
       form {

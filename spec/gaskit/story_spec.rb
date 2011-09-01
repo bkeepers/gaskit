@@ -28,6 +28,11 @@ describe Story do
       story.destroy
       Story.count.should == 0
     end
+
+    it 'should not include users' do
+      User.ensure_i_exist
+      Story.count.should == 0
+    end
   end
 
   describe '.all' do
@@ -36,6 +41,11 @@ describe Story do
       story = create(:story)
       Story.all.should == [story]
       story.destroy
+      Story.all.should == []
+    end
+
+    it 'should not include users' do
+      User.ensure_i_exist
       Story.all.should == []
     end
   end

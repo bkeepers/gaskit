@@ -18,3 +18,4 @@ module Gaskit
 end
 
 require 'gaskit/story'
+require 'gaskit/user'
