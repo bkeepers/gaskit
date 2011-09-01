@@ -8,8 +8,15 @@
     padding:15px;
   }
   form {
-    height:100%;
-    overflow-y:auto;
+    .scrollable {
+      bottom:35px;
+      left:0;
+      overflow-y:auto;
+      position:absolute;
+      right:0;
+      top:35px;
+
+    }
     textarea {
       width:99%;
       height:80px;
