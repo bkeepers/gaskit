@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Gaskit::App do
+describe App do
   include Rack::Test::Methods
 
   def app
@@ -46,7 +46,7 @@ describe Gaskit::App do
 
     it 'should create a story' do
       subject
-      Gaskit::Story.count.should == 1
+      Story.count.should == 1
     end
 
     it 'should render json' do
@@ -95,7 +95,7 @@ describe Gaskit::App do
 
     it 'should destroy the story' do
       subject
-      Gaskit::Story.key?(@story.id).should be_false
+      Story.key?(@story.id).should be_false
     end
   end
 end

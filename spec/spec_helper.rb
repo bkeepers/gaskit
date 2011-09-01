@@ -12,3 +12,5 @@ RSpec.configure do |config|
     Gaskit.repo.git.fs_delete("refs/heads/gaskit")
   end
 end
+
+include Gaskit # so we don't have to namespace EVERYTHING
