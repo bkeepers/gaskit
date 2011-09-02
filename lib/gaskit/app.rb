@@ -2,14 +2,10 @@ module Gaskit
   class App < Sinatra::Base
     set :root, Gaskit.root
     set :sprockets, Sprockets::Environment.new(root) { |env|
-      env.static_root = root.join('public', 'assets')
+      env.append_path(root.join('app', 'assets', 'stylesheets'))
+      env.append_path(root.join('app', 'assets', 'javascripts'))
+      env.append_path(root.join('app', 'assets', 'images'))
     }
-
-    configure do
-      sprockets.append_path(root.join('app', 'assets', 'stylesheets'))
-      sprockets.append_path(root.join('app', 'assets', 'javascripts'))
-      sprockets.append_path(root.join('app', 'assets', 'images'))
-    end
 
     helpers do
       def asset_path(source)
