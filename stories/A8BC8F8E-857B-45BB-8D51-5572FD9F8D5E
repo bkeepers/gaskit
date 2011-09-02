@@ -1,0 +1,5 @@
+--- 
+position: 0.999755859375
+owner_email: 
+description: Create stand-alone executable that launches against git repo in current working directory
+status: pending
