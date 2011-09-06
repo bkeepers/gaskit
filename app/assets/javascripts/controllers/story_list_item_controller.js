@@ -1,4 +1,5 @@
 var StoryListItemController = Spine.Controller.create({
+  elements: {'form': 'form'},
   events:   {'click button': 'update'},
 
   init: function() {
@@ -24,6 +25,7 @@ var StoryListItemController = Spine.Controller.create({
   },
 
   update: function(e) {
+    this.story.load(this.form.serializeForm());
     this.story.updateAttribute('status', $(e.target).val());
     return false;
   }

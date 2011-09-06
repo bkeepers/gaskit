@@ -7,6 +7,10 @@
     {{/f}}
 
     <form>
+      {{#unless owner_email}}
+        {{#me}}<input type="hidden" name="owner_email" value="{{email}}">{{/me}}
+      {{/unless}}
+
       {{#isPending}}
         <button name="status" value="started" class="start">Start</button>
       {{/isPending}}

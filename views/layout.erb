@@ -14,6 +14,9 @@
     <![endif]-->
     <link rel="stylesheet" href="<%= asset_path('application.css') %>" type="text/css" media="screen">
     <script src="<%= asset_path('application.js') %>"></script>
+    <script>
+      User.me = new User(<%= Gaskit::User.me.to_json %>);
+    </script>
   </head>
   <body>
     <div id="container">

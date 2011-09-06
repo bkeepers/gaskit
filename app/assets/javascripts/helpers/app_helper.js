@@ -5,3 +5,7 @@ Handlebars.registerHelper('f', function(fn, block) {
     return typeof block == 'function' ? block(val) : val;
   }
 });
+
+Handlebars.registerHelper('me', function(fn) {
+  return fn(User.me);
+});
