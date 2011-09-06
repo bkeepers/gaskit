@@ -1,9 +1,6 @@
 --- 
-position: 0.47576904296875
+position: 0.9765625
 type: feature
 owner_email: nobody
-description: |-
-  User can browse stories by type
-  
-  feature or bug
+description: User can browse stories by feature, bug, and release
 status: pending
