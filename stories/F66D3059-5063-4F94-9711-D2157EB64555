@@ -1,4 +1,6 @@
 --- 
 position: 0.984375
-description: A user can browse stories by status
+type: feature
+owner_email: nobody
+description: User can browse stories by status
 status: pending
