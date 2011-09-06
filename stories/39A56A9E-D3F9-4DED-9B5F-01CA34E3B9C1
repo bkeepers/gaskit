@@ -1,5 +1,7 @@
 --- 
-position: 0.9990234375
+position: 0.99981689453125
+type: feature
+owner_email: 
 description: "Add keyboard shortcuts\r\n\
   \r\n\
   up/down - select previous/next story\r\n\
