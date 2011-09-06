@@ -47,6 +47,13 @@
         background: url(icon-bug.png) no-repeat 14px 10px;
       }
 
+      &.release {
+        background-color:#EEE;
+        background-image: -webkit-linear-gradient(#f7f7f7, #eee 80%);
+
+        a { background: url(icon-release.png) no-repeat 14px 10px; }
+      }
+
       &.approved {
         background-color: rgb(238,238,238);
         color: rgb(150,150,150);
