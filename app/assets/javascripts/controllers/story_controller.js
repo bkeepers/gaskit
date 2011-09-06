@@ -13,6 +13,7 @@ var StoryController = Spine.Controller.create({
 
   render: function() {
     this.html(this.template());
+    this.el.find('.segmented input:radio:checked').trigger('change');
     return this;
   },
 

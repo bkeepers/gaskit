@@ -1,0 +1,59 @@
+.segmented {
+  display: inline-block;
+  margin: 6px 0;
+  @include border-radius(4px);
+  @include box-shadow(0 1px 0 rgba(255,255,255,0.5));
+  border: 1px solid rgba(0,0,0,0.3);
+
+  label {
+    display: block;
+    float:left;
+    line-height:22px;
+    padding: 0 12px;
+    color: #262626;
+    font-weight: bold;
+    border-right: 1px solid #777;
+    border-left: 1px solid rgba(255,255,255,0.5);
+    text-shadow: 0 1px 0 #fff;
+    background: #eee;
+    background: -webkit-linear-gradient(#eee, #ccc 80%);
+    background: -moz-linear-gradient(top, #fff, #ddd);
+
+    &:first-child {
+      -webkit-border-top-left-radius: 3px;
+      -webkit-border-bottom-left-radius: 3px;
+      -moz-border-radius-topleft: 3px;
+      -moz-border-radius-bottomleft: 3px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      border-left:0;
+    }
+
+    &:last-child {
+      -webkit-border-top-right-radius: 3px;
+      -webkit-border-bottom-right-radius: 3px;
+      -moz-border-radius-topright: 3px;
+      -moz-border-radius-bottomright: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      border-right:0;
+    }
+
+    &:active, &.selected {;
+      border-left:0;
+      padding-left:13px;
+      background: #ccc;
+      background: -webkit-linear-gradient(#ccc, #aaa 80%);
+      background: -moz-linear-gradient(top, #ddd, #bbb);
+      text-shadow: 0 1px 0 #eee;
+      -webkit-box-shadow: inset 0 1px 4px rgba(0,0,0,0.3);
+      -moz-box-shadow: inset 0 1px 4px rgba(0,0,0,0.3);
+      box-shadow: inset 0 1px 4px rgba(0,0,0,0.3);
+    }
+
+    input[type=radio] {
+      position:absolute;
+      left:-5000px;
+    }
+  }
+}

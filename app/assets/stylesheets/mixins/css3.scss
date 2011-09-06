@@ -6,3 +6,12 @@
   -khtml-border-radius: $radius;
   border-radius: $radius;
 }
+
+@mixin box-shadow($values) {
+  -webkit-box-shadow: $values;
+  -moz-box-shadow: $values;
+  -o-box-shadow: $values;
+  -ms-box-shadow: $values;
+  -khtml-box-shadow: $values;
+  box-shadow: $values;
+}

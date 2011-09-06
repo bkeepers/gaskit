@@ -1,11 +1,27 @@
 <form action="/stories/{{id}}" method="PUT">
   <header>
+    <div class="segmented">
+      <label>
+        <input type="radio" name="type" value="feature"{{#f isFeature}} checked{{/f}}>
+        Feature
+      </label>
+      <label>
+        <input type="radio" name="type" value="bug"{{#f isBug}} checked{{/f}}>
+        Bug
+      </label>
+      <label>
+        <input type="radio" name="type" value="release"{{#f isRelease}} checked{{/f}}>
+        Release
+      </label>
+    </div>
+
+
     <ul>
       <li><button type="submit">Save</button></li>
     </ul>
   </header>
 
-  <div class="scrollable">
+  <div class="content">
     <h2>Description</h2>
     <section>
       <textarea name="description">{{description}}</textarea>

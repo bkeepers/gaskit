@@ -214,3 +214,9 @@ When 'I debug' do
   debugger
   true
 end
+
+Then /^the "([^"]*)" radio should be "([^"]*)"$/ do |field, value|
+  field = find(:xpath, XPath::HTML.field(field, :checked => true))
+  field.value.should == value
+end
+

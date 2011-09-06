@@ -7,8 +7,11 @@
   section {
     padding:15px;
   }
+  header {
+    text-align:center;
+  }
   form {
-    .scrollable {
+    .content {
       bottom:36px;
       left:0;
       overflow-y:auto;

@@ -31,10 +31,9 @@
         display:block;
         color:inherit;
         text-decoration:none;
-
-        &:hover {
-          background-color:rgb(248,248,248);
-        }
+      }
+      &:hover {
+        background-color:rgb(248,248,248);
       }
 
       .owner {
@@ -44,11 +43,15 @@
         text-shadow:none;
       }
 
+      &.bug a {
+        background: url(icon-bug.png) no-repeat 14px 10px;
+      }
+
       &.approved {
         background-color: rgb(238,238,238);
         color: rgb(150,150,150);
 
-        a:hover {
+        &:hover {
           background-color: rgb(235, 235, 235);
         }
         .owner {
@@ -56,7 +59,7 @@
         }
       }
 
-      &.active, &.active a:hover {
+      &.active, &.active:hover {
         background: -webkit-linear-gradient(top, rgb(74, 171, 239) 0%, rgb(1,136,222) 80%);
         color:#fff;
         text-shadow: 0px 1px 1px rgba(0,0,0,0.5);

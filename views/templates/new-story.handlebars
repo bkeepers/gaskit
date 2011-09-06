@@ -1,8 +1,26 @@
 <form action="/stories" id="new_story" method="POST">
   <header>
+    <div class="segmented">
+      <label>
+        <input type="radio" name="type" value="feature" checked>
+        Feature
+      </label>
+      <label>
+        <input type="radio" name="type" value="bug">
+        Bug
+      </label>
+      <label>
+        <input type="radio" name="type" value="release">
+        Release
+      </label>
+    </div>
+
     <ul><li><button type="submit">Save</button></li></ul>
   </header>
   <div class="content">
-    <textarea name="description"></textarea>
+    <h2>Description</h2>
+    <section>
+      <textarea name="description"></textarea>
+    </section>
   </div>
 </form>

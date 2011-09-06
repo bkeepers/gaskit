@@ -18,11 +18,12 @@ var NewStoryController = Spine.Controller.create({
 
   render: function() {
     this.html(this.template());
+    this.el.find('.segmented input:radio:checked').trigger('change');
     return this;
   },
 
   template: function() {
     template = Handlebars.compile($('#new-story-template').html());
-    return template();
+    return template(new Story());
   }
 });

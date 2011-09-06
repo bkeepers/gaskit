@@ -11,6 +11,18 @@ Feature: Stories
     When I go to the home page
     Then I should see "Set up integration tests"
 
+  Scenario: Adding a bug
+    When I go to the home page
+    And I follow "New Story"
+    And I choose "Bug" within the story editor
+    And I fill in "description" with "Sometimes stuff blows up" within the story editor
+    And I press "Save" within the story editor
+    Then I should see "Sometimes stuff blows up"
+
+    When I go to the home page
+    And I follow "Sometimes stuff blows up"
+    And the "type" radio should be "bug" within the story editor
+
   Scenario: Updating a story
     Given the following story exists:
       | description      |
@@ -21,6 +33,7 @@ Feature: Stories
 
     When I fill in "description" with "User can update a story" within the story editor
     And I select "Started" from "status" within the story editor
+    And I choose "Bug" within the story editor
     And I press "Save" within the story editor
 
     Then I should see "User can update a story" within the story list
@@ -29,6 +42,9 @@ Feature: Stories
     When I go to the home page
     Then I should see "User can update a story"
     And I should not see "Updating a story"
+
+    When I follow "User can update a story"
+    Then the "type" radio should be "bug" within the story editor
 
   Scenario: Deleting a story
     Given the following story exists:

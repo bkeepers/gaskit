@@ -1,4 +1,4 @@
-var Story = Spine.Model.setup('Story', 'description', 'status', 'position', 'owner_email');
+var Story = Spine.Model.setup('Story', 'description', 'type', 'status', 'position', 'owner_email');
 
 Story.extend(Spine.Model.Ajax).extend({
   url: '/stories'
@@ -17,6 +17,18 @@ Story.include({
 
   owner: function() {
     return User.findByAttribute('email', this.owner_email);
+  },
+
+  isFeature: function() {
+    return this.type == 'feature' || !this.type;
+  },
+
+  isBug: function() {
+    return this.type == 'bug';
+  },
+
+  isRelease: function() {
+    return this.type == 'release';
   }
 });
 
