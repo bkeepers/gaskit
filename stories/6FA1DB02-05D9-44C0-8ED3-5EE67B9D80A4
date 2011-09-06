@@ -1,4 +1,5 @@
 --- 
 position: 0.47607421875
-description: Approved tasks get cleared out
+owner_email: nobody
+description: Approved stories get cleared out
 status: pending
