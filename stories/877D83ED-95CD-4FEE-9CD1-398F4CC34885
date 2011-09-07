@@ -1,6 +1,6 @@
 --- 
 position: 0.999786376953125
-type: release
-owner_email: 
+type: milestone
+owner_email: nobody
 description: First open source release
 status: pending
