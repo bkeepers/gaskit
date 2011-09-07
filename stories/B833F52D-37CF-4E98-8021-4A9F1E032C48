@@ -1,4 +1,6 @@
 --- 
 position: 0.5
+type: feature
+owner_email: brandon@opensoul.org
 description: User can create milestones
-status: pending
+status: started
