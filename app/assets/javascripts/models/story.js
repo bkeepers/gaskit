@@ -27,8 +27,8 @@ Story.include({
     return this.type == 'bug';
   },
 
-  isRelease: function() {
-    return this.type == 'release';
+  isMilestone: function() {
+    return this.type == 'milestone';
   }
 });
 

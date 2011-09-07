@@ -47,11 +47,11 @@
         background: url(icon-bug.png) no-repeat 14px 10px;
       }
 
-      &.release {
+      &.milestone {
         background-color:#EEE;
         background-image: -webkit-linear-gradient(#f7f7f7, #eee 80%);
 
-        a { background: url(icon-release.png) no-repeat 14px 10px; }
+        a { background: url(icon-milestone.png) no-repeat 14px 10px; }
       }
 
       &.approved {
