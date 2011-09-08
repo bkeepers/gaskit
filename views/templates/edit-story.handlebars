@@ -15,37 +15,34 @@
       </label>
     </div>
 
-
     <ul>
       <li><button type="submit">Save</button></li>
     </ul>
   </header>
 
   <div class="content">
-    <h2>Description</h2>
+    <h2>Details</h2>
     <section>
-      <textarea name="description">{{description}}</textarea>
-    </section>
-
-    <h2>Status</h2>
-    <section>
-      <p>
-        <select name="status">
+      <p><textarea name="description">{{description}}</textarea></p>
+      <p class="status">
+        <label for="story_status">Status</label>
+        <select id="story_status" name="status">
           {{#statuses}}
             <option value="{{value}}"{{#if selected}} selected="selected"{{/if}}>{{name}}</option>
           {{/statuses}}
         </select>
       </p>
-    </section>
 
-    <section>
-      <label for="story_owner">Owned by</label>
-      <select id="story_owner" name="owner_email">
-        <option>nobody</option>
-        {{#users}}
-          <option value="{{email}}" {{#selected}} selected="selected"{{/selected}}>{{name}}</option>
-        {{/users}}
-      </select>
+
+      <p class="owner">
+        <label for="story_owner">Owned by</label>
+        <select id="story_owner" name="owner_email">
+          <option>nobody</option>
+          {{#users}}
+            <option value="{{email}}" {{#selected}} selected="selected"{{/selected}}>{{name}}</option>
+          {{/users}}
+        </select>
+      </p>
     </section>
 
     <h2>Discuss</h2>

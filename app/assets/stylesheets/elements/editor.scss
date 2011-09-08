@@ -6,6 +6,15 @@
   top:0;
   section {
     padding:15px;
+    overflow:hidden;
+
+    p.status {
+      float: left;
+    }
+
+    p.owner {
+      float: right;
+    }
   }
   header {
     text-align:center;
