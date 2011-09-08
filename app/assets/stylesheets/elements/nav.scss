@@ -1,5 +1,6 @@
 #nav {
   background:rgb(23,31,38) url(sidebar.png);
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0) 80%, rgba(0,5,20,0.4)), url(sidebar.png);
   color:#fff;
   float:left;
   height:100%;
@@ -49,7 +50,9 @@
       }
     }
     li.active {
-      background: -webkit-linear-gradient(top, rgb(74, 171, 239) 0%, rgb(1,136,222) 80%);
+      background: rgb(74, 171, 239);
+      background: -webkit-linear-gradient(left, rgba(0,0,0,0) 90%, rgba(0,0,0,0.1)),
+                  -webkit-linear-gradient(top, rgb(74, 171, 239) 0%, rgb(1,136,222) 80%);
     }
 
     li a {
