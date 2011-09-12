@@ -1,6 +1,6 @@
 --- 
 position: 0.47576904296875
 type: feature
-owner_email: 
+owner_email: brandon@opensoul.org
 description: Create stand-alone executable that launches against git repo in current working directory
-status: pending
+status: started
