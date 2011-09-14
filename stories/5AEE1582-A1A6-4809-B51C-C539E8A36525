@@ -1,4 +1,6 @@
 --- 
 position: 0.4759521484375
+type: feature
+owner_email: brandon@opensoul.org
 description: User can discuss a story
-status: pending
+status: started
