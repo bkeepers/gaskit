@@ -1,6 +1,10 @@
 --- 
 position: 0.999908447265625
 type: bug
-owner_email: 
-description: MAke it work!
+owner_email: nobody
+description: |
+  Make it work!
+  
+  blah blah bal
+
 status: pending
