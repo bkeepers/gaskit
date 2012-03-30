@@ -1,9 +1,9 @@
 --- 
 position: 0.5
 type: feature
-owner_email: 
+status: completed
+owner_email: brandon@opensoul.org
 description: |-
   Style editor
   
   Need a mockup right now.
-status: started
