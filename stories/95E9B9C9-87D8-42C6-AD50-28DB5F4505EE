@@ -1,5 +1,6 @@
 --- 
 position: 0.475341796875
+type: feature
+status: approved
 owner_email: brandon@opensoul.org
 description: Story can be assigned to a user
-status: delivered
