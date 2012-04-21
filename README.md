@@ -10,5 +10,5 @@ Gaskit was created as a proof of concept for using Git as a database for an appl
 
 ## Running the app
 
-$ bundle install
-$ bundle exec rackup
+    $ bundle install
+    $ bundle exec rackup
