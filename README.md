@@ -6,9 +6,16 @@ Gaskit a git-backed issue tracker. It uses a branch in your local git database t
 
 ## Current Status
 
-Gaskit was created as a proof of concept for using Git as a database for an application. It currently only runs against itself. To see what else needs done, clone the repo and run the app.
+Gaskit was created as a proof of concept for using Git as a database for an application. It currently only runs against itself.
+
+There is a lot more work to do before it is really useful. If you'd like to help out, clone the repo and run the app to see what needs done.
 
 ## Running the app
 
     $ bundle install
     $ bundle exec rackup
+
+## Contributors
+
+* [Brandon Keepers](http://github.com/bkeepers)
+* [Jonathan Hoyt](http://github.com/jonmagic)
