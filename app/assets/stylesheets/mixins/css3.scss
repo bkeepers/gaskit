@@ -7,11 +7,24 @@
   border-radius: $radius;
 }
 
-@mixin box-shadow($values) {
+@mixin box-shadow($v1, $v2: false, $v3:false, $v4:false) {
+  $values: compact( $v1, $v2, $v3, $v4 );
+
   -webkit-box-shadow: $values;
   -moz-box-shadow: $values;
   -o-box-shadow: $values;
   -ms-box-shadow: $values;
   -khtml-box-shadow: $values;
   box-shadow: $values;
+}
+
+@mixin linear-gradient($v1, $v2: false, $v3:false, $v4:false) {
+  $values: compact($v1, $v2, $v3, $v4);
+
+  background: -webkit-linear-gradient($values);
+  background: -moz-linear-gradient($values);
+  background: -o-linear-gradient($values);
+  background: -ms-linear-gradient($values);
+  background: -khtml-linear-gradient($values);
+  background: linear-gradient($values);
 }

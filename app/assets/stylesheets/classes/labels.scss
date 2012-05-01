@@ -7,7 +7,7 @@
 
 .label {
   @extend .inset;
-  -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 1px rgba(200,200,200,0.1);
+  @include box-shadow(inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 1px rgba(200,200,200,0.1));
   background-color:rgba(0,0,0,0.1);
   font-size:$label_size;
   line-height:$label_size*1.2;
@@ -17,19 +17,19 @@
 
 .button, button {
   @extend .inset;
-  -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 1px rgba(255,255,255,0.2);
+  @include box-shadow(inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 1px rgba(255,255,255,0.2));
   display: inline-block;
   line-height:24px;
   padding:0 10px;
   text-shadow:rgba(0,0,0,0.3) 0px 1px 1px;
   text-transform:uppercase;
-  background: -webkit-linear-gradient(top, rgb(80,175,237) 0%, rgb(2,128,201) 80%);
+  @include linear-gradient((top, rgb(80,175,237) 0%, rgb(2,128,201) 80%));
   margin:0;
   font-size:11px;
   font-weight:bold;
 }
 
 .button.destroy, button.destroy {
-  background: -webkit-linear-gradient(top, rgb(150,150,150) 0%, rgb(130,130,130) 80%);
+  @include linear-gradient((top, rgb(150,150,150) 0%, rgb(130,130,130) 80%));
   color: #ddd;
 }
